@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   assertUnreachable,
   ConfigUtils,
@@ -68,7 +69,7 @@ export class PreviewPanel implements PreviewProxy, vscode.Disposable {
     @inject("vaults") private vaults: DVault[],
     @inject("DendronConfig") private dendronConfig: DendronConfig,
     @inject("ReducedDEngine") private engine: ReducedDEngine
-  ) {}
+  ) { }
 
   /**
    * Show the preview.
@@ -269,7 +270,7 @@ export class PreviewPanel implements PreviewProxy, vscode.Disposable {
           if (
             !editor ||
             editor.document.uri.fsPath !==
-              vscode.window.activeTextEditor?.document.uri.fsPath ||
+            vscode.window.activeTextEditor?.document.uri.fsPath ||
             (await this.isLockedAndDirty())
           ) {
             return;

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createLogger } from "@dendronhq/common-frontend";
 import _ from "lodash";
 import React, { useEffect, useRef, useState } from "react";

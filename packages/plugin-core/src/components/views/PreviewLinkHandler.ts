@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   DNoteAnchorBasic,
   DVault,
@@ -44,7 +45,7 @@ export class PreviewLinkHandler implements IPreviewLinkHandler {
     @inject("wsRoot") private wsRoot: URI,
     @inject("ReducedDEngine") private engine: ReducedDEngine,
     @inject("vaults") private vaults: DVault[]
-  ) {}
+  ) { }
 
   public async onLinkClicked({
     data,

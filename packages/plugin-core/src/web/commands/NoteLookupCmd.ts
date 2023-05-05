@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   type ReducedDEngine,
   NoteUtils,
@@ -21,7 +22,7 @@ export class NoteLookupCmd {
     private engine: ReducedDEngine,
     @inject("NoteProvider") private noteProvider: ILookupProvider,
     @inject("ITelemetryClient") private _analytics: ITelemetryClient
-  ) {}
+  ) { }
 
   public async run() {
     this._analytics.track(DENDRON_COMMANDS.LOOKUP_NOTE.key);

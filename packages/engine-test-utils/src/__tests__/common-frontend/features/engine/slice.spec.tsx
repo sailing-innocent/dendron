@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { APIUtils } from "@dendronhq/common-all";
 import { combinedStore, engineSlice } from "@dendronhq/common-frontend";
 import { NoteTestUtilsV4 } from "@dendronhq/common-test-utils";

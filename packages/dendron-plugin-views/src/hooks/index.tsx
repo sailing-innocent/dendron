@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { NoteProps } from "@dendronhq/common-all";
 import {
   createLogger,

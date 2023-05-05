@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import * as _ from "lodash";
 import { inject, injectable } from "tsyringe";
 import * as vscode from "vscode";

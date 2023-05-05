@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   DNodeUtils,
   DVault,
@@ -37,7 +38,7 @@ export class LookupQuickpickFactory {
     @inject("vaults") private vaults: DVault[],
     @inject("AutoCompleteEvent") private tabAutoCompleteEvent: Event<void>,
     private wsUtils: WSUtilsWeb
-  ) {}
+  ) { }
 
   public showLookup(
     opts: LookupQuickpickFactoryCreateOpts

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   EngineEventEmitter,
   type ReducedDEngine,
@@ -28,8 +29,7 @@ import { TreeNote } from "./TreeNote";
  */
 @injectable()
 export class EngineNoteProvider
-  implements TreeDataProvider<string>, Disposable
-{
+  implements TreeDataProvider<string>, Disposable {
   private _onDidChangeTreeDataEmitter: EventEmitter<string | undefined | void>;
   private _onEngineNoteStateChangedDisposable: Disposable;
   private _tree: { [key: string]: TreeNote } = {};

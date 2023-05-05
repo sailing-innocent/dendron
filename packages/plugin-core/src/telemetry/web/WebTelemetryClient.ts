@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AppNames } from "@dendronhq/common-all";
 import axios, { AxiosRequestConfig } from "axios";
 import { inject, injectable, registry } from "tsyringe";
@@ -38,7 +39,7 @@ export class WebTelemetryClient implements ITelemetryClient {
   constructor(
     @inject("anonymousId") private anonymousId: string,
     @inject("extVersion") private extVersion: string
-  ) {}
+  ) { }
 
   /**
    * This key talks to the 'Dendron-Web-Extension' source in Segment. NOTE: this

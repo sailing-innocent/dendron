@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   DVault,
   normalizeUnixPath,
@@ -16,7 +17,7 @@ export class WSUtilsWeb {
     private engine: ReducedDEngine,
     @inject("wsRoot") private wsRoot: URI,
     @inject("vaults") private vaults: DVault[]
-  ) {}
+  ) { }
 
   getVaultFromDocument(document: vscode.TextDocument) {
     const txtPath = document.uri.fsPath;

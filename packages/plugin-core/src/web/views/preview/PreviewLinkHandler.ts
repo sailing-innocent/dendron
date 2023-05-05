@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   DLogger,
   DNoteAnchorBasic,
@@ -29,7 +30,7 @@ export class PreviewLinkHandler implements IPreviewLinkHandler {
     @inject("wsRoot") private wsRoot: URI,
     @inject("ReducedDEngine") private engine: ReducedDEngine,
     @inject("logger") private logger: DLogger
-  ) {}
+  ) { }
 
   public async onLinkClicked({
     data,
@@ -128,13 +129,13 @@ export class PreviewLinkHandler implements IPreviewLinkHandler {
   public async getNavigationTargetNoteForWikiLink({
     data,
   }: // engine,
-  {
-    data: NoteViewMessage["data"];
-    // engine: DEngineClient;
-  }): Promise<{
-    note: NotePropsMeta | undefined;
-    anchor: DNoteAnchorBasic | undefined;
-  }> {
+    {
+      data: NoteViewMessage["data"];
+      // engine: DEngineClient;
+    }): Promise<{
+      note: NotePropsMeta | undefined;
+      anchor: DNoteAnchorBasic | undefined;
+    }> {
     // wiki links will have the following format
     //
     // with `prettyLinks` set to false

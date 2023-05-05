@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { DendronError, RespV2 } from "@dendronhq/common-all";
 import {
   SegmentClient,

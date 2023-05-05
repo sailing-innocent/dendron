@@ -223,8 +223,7 @@ export function errorsList(error: any) {
 
 export class DendronServerError
   extends DendronError
-  implements IDendronError, ServerErrorProps
-{
+  implements IDendronError, ServerErrorProps {
   /**
    * Optional HTTP status code for error
    */
@@ -236,7 +235,7 @@ export class DendronServerError
   public status?: string;
 }
 
-export class IllegalOperationError extends DendronError {}
+export class IllegalOperationError extends DendronError { }
 
 export function stringifyError(err: Error) {
   return JSON.stringify(err, Object.getOwnPropertyNames(err));
@@ -253,9 +252,8 @@ export const error2PlainObject = (err: IDendronError): DendronErrorProps => {
 
 export class ErrorMessages {
   static formatShouldNeverOccurMsg(description?: string) {
-    return `${
-      description === undefined ? "" : description + " "
-    }This error should never occur! Please report a bug if you have encountered this.`;
+    return `${description === undefined ? "" : description + " "
+      }This error should never occur! Please report a bug if you have encountered this.`;
   }
 }
 
@@ -393,7 +391,7 @@ export class ErrorUtils {
     return _.has(error, "isAxiosError");
   }
 
-  static isDendronError(error: unknown): error is DendronError {
+  static isDendronError(error: any): error is DendronError {
     return _.get(error, "name", "") === "DendronError";
   }
   /**

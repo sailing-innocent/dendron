@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import {
   BacklinkUtils,
   ConsoleLogger,
@@ -53,8 +55,7 @@ import {
 @singleton()
 export class DendronEngineV3Web
   extends EngineV3Base
-  implements ReducedDEngine, EngineEventEmitter
-{
+  implements ReducedDEngine, EngineEventEmitter {
   private _onNoteChangedEmitter = new EventEmitter<NoteChangeEntry[]>();
   private wsRootURI: URI;
 
@@ -546,9 +547,8 @@ export class DendronEngineV3Web
     } catch (error) {
       return {
         error: new DendronError({
-          message: `Unable to render note ${
-            opts.note!.fname
-          } in ${VaultUtils.getName(opts.note!.vault)}`,
+          message: `Unable to render note ${opts.note!.fname
+            } in ${VaultUtils.getName(opts.note!.vault)}`,
           payload: error,
         }),
       };

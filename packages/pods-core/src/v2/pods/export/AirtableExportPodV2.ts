@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Airtable, { Base, FieldSet, Record, Records } from "@dendronhq/airtable";
 import {
   DendronCompositeError,

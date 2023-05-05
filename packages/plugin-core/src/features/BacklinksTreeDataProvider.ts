@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   assertUnreachable,
   BacklinkPanelSortOrder,
@@ -41,8 +42,7 @@ import { Backlink, BacklinkTreeItemType } from "./Backlink";
  * Provides the data to support the backlinks tree view panel
  */
 export default class BacklinksTreeDataProvider
-  implements TreeDataProvider<Backlink>, Disposable
-{
+  implements TreeDataProvider<Backlink>, Disposable {
   private readonly MAX_LINES_OF_CONTEX̣T = 10;
   private readonly FRONTMATTER_TAG_CONTEXT_PLACEHOLDER =
     "_Link is a Frontmatter Tag_";

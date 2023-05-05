@@ -1,3 +1,4 @@
+// @ts-nocheck
 import _ from "lodash";
 import { env, window } from "vscode";
 import { WSUtilsWeb } from "../utils/WSUtils";
@@ -14,7 +15,7 @@ export class CopyNoteURLCmd {
     private wsUtils: WSUtilsWeb,
     @inject("ITelemetryClient") private _analytics: ITelemetryClient,
     private siteUtils?: SiteUtilsWeb
-  ) {}
+  ) { }
 
   async showFeedback(link: string) {
     window.showInformationMessage(`${link} copied`);

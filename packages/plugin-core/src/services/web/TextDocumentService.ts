@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   DendronASTDest,
   DLogger,

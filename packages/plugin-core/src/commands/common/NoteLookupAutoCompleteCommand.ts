@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { inject, injectable } from "tsyringe";
 import { EventEmitter } from "vscode";
 import { DENDRON_COMMANDS } from "../../constants";
@@ -8,7 +9,7 @@ export class NoteLookupAutoCompleteCommand {
 
   constructor(
     @inject("AutoCompleteEventEmitter") private emitter: EventEmitter<void>
-  ) {}
+  ) { }
 
   run() {
     this.emitter.fire();

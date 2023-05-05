@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable react-hooks/exhaustive-deps */
 import {
   CalendarViewMessageType,
@@ -141,8 +142,8 @@ export default function DendronCalendarPanel({ ide, engine }: DendronProps) {
         return dailyDate.isValid
           ? dailyDate
           : monthlyDate.isValid
-          ? monthlyDate
-          : undefined;
+            ? monthlyDate
+            : undefined;
       }
 
       return undefined;

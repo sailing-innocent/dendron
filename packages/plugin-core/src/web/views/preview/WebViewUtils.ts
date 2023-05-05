@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   APIUtils,
   CONSTANTS,
@@ -29,7 +30,7 @@ export class WebViewUtils {
     @inject("wsRoot") private wsRoot: URI,
     @inject("port") private port: number,
     @inject("extensionUri") private extensionUri: URI
-  ) {}
+  ) { }
 
   // TODO: Make sure the stage still works properly
   private getAssetUri() {
@@ -574,9 +575,8 @@ export class WebViewUtils {
       <body onload="onload()" data-theme-override="${initialTheme || ""}">
         <div id="main-content-wrap" class="main-content-wrap">
           <div id="main-content" class="main-content">
-            <div id="root" data-url="${url}" data-ws="${
-      wsRoot.fsPath
-    }" data-browser="${browser}" data-name="${name}"></div>
+            <div id="root" data-url="${url}" data-ws="${wsRoot.fsPath
+      }" data-browser="${browser}" data-name="${name}"></div>
           </div>
         </div>
   

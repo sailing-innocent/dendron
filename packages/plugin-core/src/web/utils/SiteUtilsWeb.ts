@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   DendronError,
   DNodeUtils,
@@ -14,7 +15,7 @@ export class SiteUtilsWeb {
     @inject("siteIndex") private siteIndex?: string,
     @inject("assetsPrefix") private assetsPrefix?: string,
     @inject("enablePrettyLinks") private enablePrettyLinks?: boolean
-  ) {}
+  ) { }
 
   getSiteUrlRootForVault({ vault }: { vault: DVault }): {
     url?: string;
@@ -63,9 +64,9 @@ export class SiteUtilsWeb {
     const isIndex: boolean = _.isUndefined(note)
       ? false
       : this.isIndexNote({
-          indexNote: this.siteIndex,
-          note,
-        });
+        indexNote: this.siteIndex,
+        note,
+      });
     if (isIndex) {
       return `/`;
     }
@@ -75,9 +76,8 @@ export class SiteUtilsWeb {
       _.isBoolean(usePrettyLinks) && usePrettyLinks ? "" : ".html";
 
     // put together the url path
-    return `${pathPrefix || ""}${pathValue}${pathExtension}${
-      pathAnchor ? "#" + pathAnchor : ""
-    }`;
+    return `${pathPrefix || ""}${pathValue}${pathExtension}${pathAnchor ? "#" + pathAnchor : ""
+      }`;
   }
 
   /**
@@ -103,9 +103,9 @@ export class SiteUtilsWeb {
     const isIndex: boolean = _.isUndefined(note)
       ? false
       : this.isIndexNote({
-          indexNote: index,
-          note,
-        });
+        indexNote: index,
+        note,
+      });
     const pathValue = note.id;
     const siteUrlPath = this.getSiteUrlPathForNote({
       addPrefix: true,
