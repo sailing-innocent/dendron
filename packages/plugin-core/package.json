@@ -1,8 +1,8 @@
 {
-  "name": "@dendronhq/plugin-core",
+  "name": "zzh-dendron",
   "private": true,
-  "displayName": "dendron",
-  "description": "Dendron is a hierarchical note taking tool that grows as you do.",
+  "displayName": "dendron-zzh",
+  "description": "This is my dendron",
   "publisher": "dendron",
   "version": "0.119.0",
   "sponsor": {
